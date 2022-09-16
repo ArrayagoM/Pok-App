@@ -6,11 +6,11 @@ import Pagination from "./Pagination";
 const Pokedex = (props) => {
     const {pokemons, page, setPage, total, loading} = props;
 
-    const lastPage = () => {
-        const nextPage = Math.max(page - 1, 0);
-        setPage(nextPage);
+    const lastPages = () => {
+        const lastPage = Math.max(page - 1, 0);
+        setPage(lastPage);
       };
-      const nextPage = () => {
+      const nextPages = () => {
         const nextPage = Math.min(page + 1, total - 1);
         setPage(nextPage);
       };
@@ -22,8 +22,8 @@ const Pokedex = (props) => {
             <Pagination
             page={page +1}
             totalPages={total}
-            onLeftClick={lastPage}
-            onRightClick={nextPage}
+            onLeftClick={lastPages}
+            onRightClick={nextPages}
             />
             </div>
             </div>

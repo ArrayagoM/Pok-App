@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import '../components/Pokemon.css'
 import FavoriteContext from "../Contexts/Favoritescontext";
 
 const Pokemon = (props) => {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { getPokemonData, getPokemons, serachPokemon } from './api';
 import './App.css';
+import './PokeSpinner.css';
 import Navbar from './components/Navbar'
 import Pokedex from './components/Pokedex';
 import Searchbar from './components/searchbar';
@@ -43,11 +44,10 @@ setNotFound(false);
 
   useEffect(()=>{
     loadFavoritePkemons();
-    console.log("Obteniendo Pokémones favoritos")
+   
   }, [])
 
   useEffect(() =>{
-    console.log("Todos los Pokémones")
     fetchPokemons();
   }, [page]);
 
@@ -100,7 +100,7 @@ setNotFound(false);
         <div> <div class="wrapper">
       <div class="pokeball">
       </div>
-    </div><p>Cargando Pokémones...</p></div>
+    </div><p className='Load'>Cargando Pokémones...</p></div>
         :
         <Pokedex
         loading={loading}

@@ -1,9 +1,7 @@
 import React from "react";
 
 const Pagination = (props) => {
-    console.log(props);
-const {onLeftClick, onRightClick, page, totalPges} = props;
-
+const {onLeftClick, onRightClick, page, totalPages} = props;
 
 return (
     <div className="pagination-coteiner">
@@ -12,7 +10,7 @@ return (
                 <span role="img" aria-label="left" >👈</span>
                 </div>
             </button>
-        <div>{page} de {totalPges}</div>
+        <div>{page} de {totalPages}</div>
         <button onClick={onRightClick}>
             <div>
                 <span role="img" aria-label="right">👉</span>

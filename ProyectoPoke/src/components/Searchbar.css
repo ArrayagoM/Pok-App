@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: rgb(254,202,27);
+    -webkit-text-stroke: 1px rgb(54,94,162);
+  }
+  .Load {
+    display: flex;
+    color: rgb(54,94,162);
+  }
