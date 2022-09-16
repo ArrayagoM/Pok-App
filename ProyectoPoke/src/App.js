@@ -1,7 +1,6 @@
 import React from 'react';
 import { getPokemonData, getPokemons, serachPokemon } from './api';
 import './App.css';
-import Main from './components/Main';
 import Navbar from './components/Navbar'
 import Pokedex from './components/Pokedex';
 import Searchbar from './components/searchbar';
@@ -87,7 +86,7 @@ setNotFound(false);
    <FavoriteProvider value={{favoritePokemons: favorites, 
     updateFavoritePokemons: updateFavoritePokemons
    }}>
-    <Main/>
+   
     <div className="App">
      
    <div>

@@ -14,7 +14,7 @@ const Pokemon = (props) => {
    updateFavoritePokemons(pokemon.name);
     }
     return (
-        <div className="Pokemon-card">
+        <div className="Pokemon-card">        
           <div className="pokemon-img-conteiner">
             <img 
             src={pokemon.sprites.front_default} 

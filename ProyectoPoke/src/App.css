@@ -7,7 +7,7 @@
             box-sizing: border-box;
 }
 body{
-background-color: rgba(245, 234, 43, 0.938);
+background-color: rgba(242, 245, 43, 0.938);
 }
 
 .wrapper
@@ -148,12 +148,118 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .Pokemon-card {
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.511);
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-
+	background:#ffebee;
+	height: 80px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+  position: relative;
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
 }
+
+.Pokemon-card:hover{
+
+  box-shadow: 0px 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.Pokemon-card:hover::before{
+  display: block;
+  content: '';
+  position: absolute;
+  width: 322px;
+  height: 77px;
+  background: #50b0f5;
+  border-radius: 75px 75px 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.Pokemon-card:hover::after{
+  background: #3847ed;
+  animation:2s counterclockwise infinite;
+}
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75%{
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+
 
 .pokemon-img {
   width: 80px;
@@ -185,7 +291,6 @@ padding: 0px 10px;
 
 .pokemon-type {
   display: flex;
-
 }
 
 .card-botton {
@@ -198,6 +303,10 @@ padding: 0px 10px;
 .pokemon-type-text {
   margin-right: 10px;
   text-transform: capitalize;
+  background-color: #384ded86;
+  width: 80px;
+  border-radius: 3px 2px 3px 10px;
+  border: #3847ed;
 
 }
 
@@ -206,3 +315,4 @@ display: flex;
 flex-direction: row;
 align-items: center;
 }
+
